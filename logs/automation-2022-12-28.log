@@ -1,0 +1,455 @@
+
+23:04:45.646 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using Log4J2 as the default logging framework
+23:04:45.656 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:04:45.656 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:04:45.660 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1ea9f009
+23:04:45.674 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:04:45.676 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 17
+23:04:45.677 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:04:45.677 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:04:45.677 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+23:04:45.678 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:04:45.678 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at testBase.BaseClass.setUp(BaseClass.java:23) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:794) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.run(TestRunner.java:596) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1063) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.run(TestNG.java:1031) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
+23:04:45.689 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:04:45.690 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @2096442d
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.84.Final.jar:4.1.84.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.6.0.jar:?]
+	at testBase.BaseClass.setUp(BaseClass.java:23) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:794) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.run(TestRunner.java:596) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1063) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestNG.run(TestNG.java:1031) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
+23:04:45.693 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+23:04:45.693 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:04:45.694 [main] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 3160408064 bytes (maybe)
+23:04:45.694 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\unnic\AppData\Local\Temp (java.io.tmpdir)
+23:04:45.694 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:04:45.695 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+23:04:45.695 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+23:04:45.695 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:04:45.696 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+23:04:45.696 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:04:45.703 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:04:45.719 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:04:45.720 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:04:45.858 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+23:04:45.858 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+23:04:45.877 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+23:04:45.883 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:04:45.883 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:04:45.892 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@65ae095c
+23:04:45.894 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@59429fac
+23:04:45.895 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@57aa341b
+23:04:45.896 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@26e412ef
+23:04:45.897 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4ae263bf
+23:04:45.898 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7103ab0
+23:04:45.900 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@19ccca5
+23:04:45.901 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@769d513
+23:04:45.902 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5e4fa1da
+23:04:45.903 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@588cd519
+23:04:45.903 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3f92c349
+23:04:45.904 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@769a58e5
+23:04:45.905 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@55f8669d
+23:04:45.906 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6be25526
+23:04:45.907 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@42435b98
+23:04:45.908 [main] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@66ba7e45
+23:04:45.931 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+23:04:45.931 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+23:04:45.931 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:04:45.931 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+23:04:45.931 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+23:04:45.932 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+23:04:45.939 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:04:45.939 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:04:45.939 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:04:46.190 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 31024 (auto-detected)
+23:04:46.192 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:04:46.192 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:04:46.199 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:04:46.200 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:04:46.221 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: a4:6b:b6:ff:fe:fc:ba:9d (auto-detected)
+23:04:46.263 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+23:04:46.263 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+23:04:46.263 [AsyncHttpClient-1-2] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@16aa6503
+23:04:46.277 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+23:04:46.277 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+23:04:46.277 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+23:04:46.277 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+23:04:46.845 [AsyncHttpClient-1-2] DEBUG io.netty.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+23:04:46.994 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x494433c2452436c5
+23:04:47.837 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+23:04:47.837 [main] TRACE testCases.TC_001_AccountRegistrationTest - capturing tracing logs
+23:04:47.837 [main] DEBUG testCases.TC_001_AccountRegistrationTest - capturing debug logs
+23:04:47.860 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+23:04:48.135 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+23:04:48.583 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+23:04:49.238 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+23:04:59.675 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+23:04:59.675 [main] WARN  testCases.TC_001_AccountRegistrationTest - customer registration is not successful
+23:04:59.676 [main] ERROR testCases.TC_001_AccountRegistrationTest - test failed.....
+23:04:59.687 [AsyncHttpClient-1-4] TRACE io.netty.handler.codec.http.websocketx.WebSocket08FrameEncoder - Encoding WebSocket Frame opCode=8 length=26
+17:02:54.141 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:02:54.166 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:02:54.293 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:02:54.729 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:02:55.256 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:03:05.631 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:03:05.631 [main] WARN  testCases.TC_001_AccountRegistrationTest - customer registration is not successful
+17:03:05.631 [main] ERROR testCases.TC_001_AccountRegistrationTest - test failed.....
+17:03:45.985 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:03:46.005 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:03:46.137 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:03:46.531 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:03:47.087 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:03:49.446 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:03:49.446 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:03:49.447 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:21:54.559 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:21:54.580 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:21:54.720 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:21:55.087 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:21:55.631 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:21:57.997 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:21:57.998 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:21:57.999 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:22:48.384 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:22:48.407 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:22:48.495 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:22:48.839 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:22:49.359 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:22:51.696 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:22:51.696 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:22:51.697 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:34:02.000 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:34:02.024 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:34:02.094 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:34:02.466 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:34:03.013 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:34:05.400 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:34:05.400 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:34:05.401 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:34:09.004 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:34:09.004 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:34:09.063 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:34:09.415 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:34:09.929 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:34:12.304 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:34:12.305 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:34:12.305 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:39:51.676 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:39:51.730 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:39:51.750 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:39:51.751 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:39:51.839 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:39:51.909 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:39:52.344 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:39:52.487 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:39:52.996 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:39:53.152 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:39:55.404 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:39:55.405 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:39:55.406 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:39:55.591 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:39:55.591 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:39:55.591 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:41:07.159 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:41:07.268 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:41:07.288 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:41:07.288 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:41:07.402 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:41:07.443 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:41:07.919 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:41:07.980 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:41:08.724 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:41:08.821 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:41:10.135 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:41:10.135 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:41:10.491 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:41:10.905 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:41:11.373 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:41:11.373 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:41:11.376 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:41:11.454 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:41:11.454 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:41:11.454 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:41:11.490 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:41:13.943 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:41:13.943 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:41:13.943 [TestNG-tests-3] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+22:23:45.741 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+22:23:45.764 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+22:23:45.913 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+22:23:46.354 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+22:23:46.921 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+22:23:49.324 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+22:23:49.324 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+22:23:49.325 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:52:05.838 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:52:05.860 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:52:05.995 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:52:06.408 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:52:06.947 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:52:09.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:52:09.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:52:09.352 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+17:40:54.726 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+17:40:54.752 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+17:40:54.883 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+17:40:55.332 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+17:40:55.915 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+17:40:58.343 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+17:40:58.343 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+17:40:58.344 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+18:21:54.368 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+18:21:54.399 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+18:21:54.561 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+18:21:55.138 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+18:21:55.833 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+18:21:58.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+18:21:58.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+18:21:58.352 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+18:24:43.684 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+18:24:43.720 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+18:24:44.019 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+18:24:44.558 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+18:24:45.336 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+18:24:47.916 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+18:24:47.916 [main] WARN  testCases.TC_001_AccountRegistrationTest - customer registration is not successful
+18:24:47.916 [main] ERROR testCases.TC_001_AccountRegistrationTest - test failed.....
+18:26:23.894 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+18:26:23.933 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+18:26:24.216 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+18:26:24.719 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+18:26:25.397 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+18:26:27.876 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+18:26:27.876 [main] WARN  testCases.TC_001_AccountRegistrationTest - customer registration is not successful
+18:26:27.876 [main] ERROR testCases.TC_001_AccountRegistrationTest - test failed.....
+18:28:26.901 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+18:28:26.935 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+18:28:27.143 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+18:28:27.625 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+18:28:28.338 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+18:28:30.875 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+18:28:30.875 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+18:28:30.878 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+13:02:06.094 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+13:02:06.116 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+13:02:06.245 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+13:02:06.641 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+13:02:07.200 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+13:02:09.568 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+13:02:09.568 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+13:02:09.571 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+13:02:11.345 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+13:06:32.378 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+13:06:32.406 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+13:06:32.552 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+13:06:32.966 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+13:06:33.523 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+13:06:35.897 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+13:06:35.898 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+13:06:35.901 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+13:06:38.297 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+14:06:31.196 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+14:06:31.214 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+14:06:31.397 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+14:06:31.798 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+14:06:32.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+14:06:34.725 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+14:06:34.725 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+14:06:34.726 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+14:06:36.672 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+16:26:33.124 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+16:26:33.147 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+16:26:33.289 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+16:26:33.714 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+16:26:34.263 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+16:26:36.666 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+16:26:36.666 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+16:26:36.667 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+16:26:38.296 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+16:30:42.825 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+16:30:42.846 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+16:30:42.953 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+16:30:43.350 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+16:30:43.914 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+16:30:46.343 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+16:30:46.343 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+16:30:46.344 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+16:30:48.620 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:08:36.515 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+07:08:36.550 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+07:08:36.717 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+07:08:37.235 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+07:08:37.947 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+07:08:40.483 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+07:08:40.483 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+07:08:40.487 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+07:08:42.524 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:28:20.229 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+07:28:20.250 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+07:28:20.369 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+07:28:20.718 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+07:28:21.248 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+07:28:23.705 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+07:28:23.706 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+07:28:23.707 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+07:28:25.565 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:33:07.846 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+07:33:07.890 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+07:33:08.055 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+07:33:08.553 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+07:33:09.271 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+07:33:11.719 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+07:33:11.719 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+07:33:11.720 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+07:33:13.673 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:36:34.163 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+07:36:34.213 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+07:36:34.434 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+07:36:34.930 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+07:36:35.668 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+07:36:38.111 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+07:36:38.111 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+07:36:38.113 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+07:36:40.244 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:36:41.597 [main] INFO  testCases.TC_002_LoginTest - ****finished TC_002_LoginTest**** 
+07:42:10.470 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+07:42:10.488 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+07:42:10.672 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+07:42:11.053 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
+07:42:11.601 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on cotinue button
+07:42:13.976 [main] INFO  testCases.TC_001_AccountRegistrationTest - verifying customer registraion
+07:42:13.976 [main] INFO  testCases.TC_001_AccountRegistrationTest - test passed......
+07:42:13.978 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****finished TC_001_AccountRegistrationTest*****
+07:42:15.548 [main] INFO  testCases.TC_002_LoginTest - *****Starting TC_002_LoginTest*****
+07:42:16.615 [main] INFO  testCases.TC_002_LoginTest - ****finished TC_002_LoginTest**** 
+07:46:11.340 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+07:46:13.078 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+07:46:13.099 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+07:46:24.006 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+07:46:24.009 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+07:46:34.893 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+07:46:34.895 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+07:46:45.733 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+07:46:45.734 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+07:46:46.922 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:03:54.536 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+13:03:55.928 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:03:55.943 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+13:04:06.729 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:04:06.731 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+13:04:17.387 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:04:17.403 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+13:04:28.050 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:04:28.065 [main] INFO  testCases.TC_003_LoginDataDrivenTest - *****Starting TC_003_LoginDataDrivenTest*****
+13:04:29.098 [main] INFO  testCases.TC_003_LoginDataDrivenTest - ****finished TC_003_LoginDataDrivenTest**** 
+13:43:08.462 [main] INFO  testCases.TC_001_AccountRegistrationTest - *****starting TC_001_AccountRegistrationTest*****
+13:43:08.486 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on my account link
+13:43:08.622 [main] INFO  testCases.TC_001_AccountRegistrationTest - clicking on registration link
+13:43:08.972 [main] INFO  testCases.TC_001_AccountRegistrationTest - *providing customer details
